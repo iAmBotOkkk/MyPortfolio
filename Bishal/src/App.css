@@ -34,6 +34,14 @@ body {
   color: white;
   /* margin-left: 1rem ; */
 }
+ .images{
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  margin: 10rem;
+  padding-left: 10rem;
+
+ }
 
 .aboutPage {
   margin: 20rem;

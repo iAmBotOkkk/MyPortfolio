@@ -16,7 +16,7 @@ body {
 .homePage {
   text-align: left;
   margin: 10rem;
-  padding-left: 10rem;
+  padding-left: 20rem;
 }
 
 .homePage h1 {
@@ -36,16 +36,24 @@ body {
 }
  .images{
   display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-template-rows: 2fr 2fr;
+  grid-template-columns: 1fr 3fr;
   margin: 10rem;
-  padding-left: 10rem;
+  padding-left: 27rem;
+  row-gap: 3rem;
+  /* border: 2px solid white; */
 
  }
+.images img{
+  max-width: 120%;
+ height: 120px;
+ border: 2px solid white;
+ padding: 1rem;
 
+}
 .aboutPage {
-  margin: 20rem;
+  margin: 10rem;
   color: white;
+  padding-left: 20rem ;
 
 }
 

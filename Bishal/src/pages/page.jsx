@@ -15,7 +15,7 @@ const Page = () => {
                 <img src="React.png" alt="" />
                 <img src="express.png" alt="" />
                 <img src="mongodb.png" alt="" />
-                <img src="nodeJS.png" alt="" />
+                <img src="node.png" alt="" />
             </div>
 
             <div className="aboutPage">

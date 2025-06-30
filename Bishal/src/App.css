@@ -8,7 +8,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
-  background: #071014;
+  background: #000000;
   color: white;
 }
 
@@ -34,80 +34,193 @@ body {
   color: white;
   /* margin-left: 1rem ; */
 }
- .images{
+
+
+.images {
   display: grid;
   grid-template-columns: 1fr 3fr;
   margin: 10rem;
   padding-left: 27rem;
   row-gap: 3rem;
+  
   /* border: 2px solid white; */
 
- }
-.images img{
+}
+
+.images img {
   max-width: 120%;
- height: 120px;
- border: 2px solid white;
- padding: 1rem;
+  height: 120px;
+  /* border: 2px solid white; */
+  padding: 1rem;
+  animation: floatInSpace 6s ease-in-out infinite;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+  box-shadow:  0 0 20px rgba(28, 216, 250, 0.5),
+    0 0 40px rgba(0, 191, 255, 0.3),
+    0 0 60px rgba(0, 255, 255, 0.2);
+  border-radius: 1rem;
+   transition: transform 0.4s ease;
+  transform-style: preserve-3d;
+  background-color: rgb(255, 255, 255);
+  
 
 }
+img:hover{
+ transform: scale(1.05);
+}
+
+@keyframes floatInSpace {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(5px, -5px) rotate(1deg);
+  }
+
+  50% {
+    transform: translate(-5px, 5px) rotate(-1deg);
+  }
+
+  75% {
+    transform: translate(3px, -3px) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+img {
+  position: relative;
+  z-index: 1;
+}
+
+img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 12px;
+}
+
+
 .aboutPage {
   margin: 10rem;
   color: white;
-  padding-left: 20rem ;
+  padding-left: 20rem;
 
 }
 
 .aboutPage h2 {
   font-size: 2rem;
-
+  font-weight: 600;
 }
 
-.aboutPage p {
-  margin-top: 20px;
+
+
+.aboutPage p{
+  margin-bottom: 1rem;
 }
 
 .contactForm {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20rem;
-
-
+  margin: 28rem;
 }
 
 form {
 
   padding: 2rem;
-  border-radius: 0.5rem;
-  color: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.3), 
+              0 0 10px rgba(0, 255, 255, 0.5);
+              
+  
 
 }
 
 .contactForm input {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   margin: 1rem;
-  padding: 1rem 10rem 2rem;
+  padding: 1rem 10rem 1rem;
   border-radius: 10px;
   border: none;
-  margin-top: 20px;
-}
+  margin-top: 30px;
+  text-align: left;
+  font-size: 1rem;
+  color: black;
+  
+  }
+  .contactForm textarea{
+    margin-top: 15px;
+    margin-left: 1rem;
+    border-radius: 10px;
+    padding: 1rem;
+    color: black;
+    overflow: hidden;
+    font-size: 1rem;
+
+  }
 
 .contactForm h2 {
-
   color: white;
   font-size: 2rem;
   text-align: center;
-
+  font-weight: 600;
 }
-
 .contactForm button {
   border: none;
   border-radius: 2rem;
   padding: 1rem 3rem 1rem;
-  margin-left: 10rem;
+  margin-left: 11rem;
   cursor: pointer;
   margin-bottom: 30px;
-  color: white;
+  color: #000000;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.Skills{
+  margin-left: 30rem;
+}
+.Skills h2{
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.Skills span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;         
+  height: 45px;         
+  border: 1px solid white;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  font-weight: 600;
+  color: rgb(11, 11, 11);
+  background-color: #eff1f4;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1); 
+  transition: transform 0.3s ease;
+  font-weight: 500;
+}
+
+.Skills span:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4); 
+}
+
+.Skills .Myskills {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
 }

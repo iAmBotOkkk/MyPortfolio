@@ -12,11 +12,12 @@ const Page = () => {
                 </p>
             </div>
             <div className="images">
-                <img src="React.png" alt="" />
+                <img  src="React.png" alt="" className="rotate"/>
                 <img src="express.png" alt="" />
                 <img src="mongodb.png" alt="" />
                 <img src="node.png" alt="" />
             </div>
+
 
             <div className="aboutPage">
                 <h2>About Me</h2>
@@ -24,12 +25,25 @@ const Page = () => {
                     web experiences.I specialize in building modern, scalable web apps using M.E.R.N stack
                 </p>
             </div>
+
+            <div className="Skills">
+                <h2>My skills</h2>
+                <div className="Myskills">
+                <span>React</span>
+                <span>NodeJs</span>
+                <span>MongoDb</span>
+                <span>NextJs</span>
+                <span>Javascript</span>
+                <span>TypeScript</span>
+                </div>
+                
+            </div>
             <div className="contactForm">
                 <form>
                     <h2>Let's Connect</h2>
                     <input type="text" placeholder="Name" required />
                     <input type="text" placeholder="email" required />
-                    <input type="text" placeholder="Message" />
+                    <textarea rows={4} cols={50} placeholder="Message"></textarea>
 
                     <button>Send Message</button>
                 </form>

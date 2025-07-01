@@ -21,9 +21,14 @@ const Page = () => {
 
             <div className="aboutPage">
                 <h2>About Me</h2>
-                <p>Hey I am Bishal,a fullstack developer who thrives on turning ideas into real,functional
-                    web experiences.I specialize in building modern, scalable web apps using M.E.R.N stack
+                <p>Hey I am Bishal,a fullstack developer who thrives on turning ideas into real,
+                    <div>functional web experiences.I specialize in building modern, scalable web apps </div>
+                    <div>using M.E.R.N stack</div>
                 </p>
+            </div>
+
+            <div className="Projects">
+                <h2>Projects</h2>
             </div>
 
             <div className="Skills">
@@ -48,8 +53,8 @@ const Page = () => {
                     <button>Send Message</button>
                 </form>
             </div>
-            <footer>
-                all copyrights reserved
+            <footer className="footer">
+               Made with 💌 by Bishal
             </footer>
         </section>
 
